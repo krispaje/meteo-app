@@ -15,12 +15,13 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
+        <form id="search-form">
           <input
             type="search"
             placeholder="Enter a city..."
             required
             class="weather-app-search"
+            id="weather-app-search"
           />
           <input type="submit" value="Search" class="weather-app-button" />
         </form>
@@ -28,7 +29,7 @@
       <main>
         <div class="weather-app-data">
           <div class="current-city-info">
-            <h1>Kaunas</h1>
+            <h1 id="searched-city">Kaunas</h1>
             <p>
               Sunday 22:14, overcast clouds <br />Humidity:
               <strong>76%</strong>, Wind: <strong>3.09km/h</strong>
@@ -57,5 +58,6 @@
         >
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
