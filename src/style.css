@@ -71,7 +71,7 @@ strong {
   font-weight: bold;
 }
 
-.weatehr-unit {
+.weather-unit {
   margin-top: 16px;
   font-size: 28px;
 }
@@ -86,10 +86,11 @@ footer {
 a {
   color: #885df1;
 }
+
 .weather-forecast {
   display: flex;
   justify-content: space-around;
-  padding-top: 30px;
+  margin-top: 30px;
 }
 .forecast-date {
   text-align: center;
@@ -105,8 +106,8 @@ a {
 
 .forecast-temperatures {
   text-align: center;
-  font-size: 16px;
-  line-height: 20px;
+
+  margin-top: 10px;
   color: #f65282;
   display: flex;
   justify-content: center;
