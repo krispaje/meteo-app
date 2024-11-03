@@ -21,6 +21,7 @@ function updateWeatherInfo(response) {
   windSpeedValue.innerHTML = `${response.data.wind.speed}km/h`;
 
   temperatureValue.innerHTML = Math.round(temperature);
+  getForecast(response.data.city);
 }
 function searchCity(city) {
   let apiKey = "9c764o4f1faeb3c3bct46f73f94b0e7b";
@@ -53,8 +54,14 @@ function doTheSearch(event) {
 
   searchCity(searchInput.value);
 }
+function getForecast(city) {
+  let apiKey = "9c764o4f1faeb3c3bct46f73f94b0e7b";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
+}
 
-function showForecast() {
+function showForecast(response) {
+  console.log(response.data);
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
 
   let forecastHtml = "";
@@ -82,4 +89,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", doTheSearch);
 
 searchCity("California");
-showForecast();
