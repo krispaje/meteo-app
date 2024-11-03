@@ -100,8 +100,10 @@ a {
   margin-bottom: 10px;
 }
 .forecast-icon {
-  text-align: center;
-  font-size: 50px;
+  width: 84px;
+  height: 84px;
+  display: block;
+  margin: 0 auto;
 }
 
 .forecast-temperatures {
